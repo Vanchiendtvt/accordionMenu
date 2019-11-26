@@ -6,15 +6,15 @@ for(var i = 0; i< accordion.length;i++){
 function createMenuAC(element){
     //console.log(element);
     tbn = element.childNodes[1];
-    mnAC = element.getElementsByTagName('ul');
+    mnAC = element.childNodes[3];
     tbn.addEventListener('click',function(event){
         event.preventDefault();
         console.log(mnAC);
-        if(mnAC[0].style.display == 'none' || mnAC[0].style.display == ''){
-            mnAC[0].style.display = 'block';
-        } else {mnAC[0].style.display ='none'}
+        if(mnAC.style.display == 'none' || mnAC.style.display == ''){
+            mnAC.style.display = 'block';
+        } else {mnAC.style.display ='none'}
     })
     tbn.addEventListener('blur',function(event){
-        mnAC[0].style.display ='none'
+        mnAC.style.display ='none'
     })
 }
